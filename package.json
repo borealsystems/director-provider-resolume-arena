@@ -1,0 +1,10 @@
+{
+  "name": "director-provider-resolume-arena",
+  "version": "1.0.0",
+  "description": "Director Provider for Resolume Arena",
+  "main": "index.js",
+  "repository": "https://phabricator.boreal.systems/diffusion/4/director-provider-resolume-arena.git",
+  "author": "Oliver Herrmann <oliver@monoxane.io>",
+  "license": "GPL-3.0",
+  "private": true
+}
