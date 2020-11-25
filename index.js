@@ -4,6 +4,10 @@ class DeviceProviderResolumeArena extends ConnectionProviderOSC {
   static providerRegistration = {
     id: 'DeviceProviderResolumeArena',
     label: 'Resolume Arena',
+    manufacturer: 'Resolume',
+    protocol: 'OSC',
+    description: 'Resolume provides a wide range of flexibility to display various types of content to suit any event thanks to its powerful effects engine and easy to use layering interface.',
+    category: 'Media Server',
     parameters: this.parameters,
     constructor: DeviceProviderResolumeArena
   }
