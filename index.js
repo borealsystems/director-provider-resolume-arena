@@ -9,6 +9,7 @@ class DeviceProviderResolumeArena extends ConnectionProviderOSC {
     description: 'Resolume provides a wide range of flexibility to display various types of content to suit any event thanks to its powerful effects engine and easy to use layering interface.',
     category: 'Media Server',
     parameters: this.parameters,
+    defaults: [null, 7000],
     constructor: DeviceProviderResolumeArena
   }
 
