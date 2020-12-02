@@ -16,18 +16,19 @@ class DeviceProviderResolumeArena extends ConnectionProviderOSC {
   providerFunctions = [
     {
       id: 'clearComposition',
-      label: 'Clear Composition',
-      parameters: [
-      ]
+      label: 'Clear Composition'
     },
     {
       id: 'clearLayer',
       label: 'Clear Layer',
       parameters: [
         {
-          inputType: 'textInput',
+          inputType: 'numberInput',
+          id: 'layer',
           label: 'Layer',
-          id: 'layer'
+          required: true,
+          placeholder: 'Layer',
+          invalidText: 'Please enter a valid Layer Number'
         }
       ]
     },
@@ -36,35 +37,43 @@ class DeviceProviderResolumeArena extends ConnectionProviderOSC {
       label: 'Connect Column',
       parameters: [
         {
-          inputType: 'textInput',
+          inputType: 'numberInput',
+          id: 'column',
           label: 'Column',
-          id: 'column'
+          required: true,
+          placeholder: 'Column Number',
+          invalidText: 'Please enter a valid Column Number'
         }
       ]
     },
     {
       id: 'connectNextColumn',
-      label: 'Connect Next Column',
-      parameters: []
+      label: 'Connect Next Column'
     },
     {
       id: 'connectPrevColumn',
-      label: 'Connect Previous Column',
-      parameters: []
+      label: 'Connect Previous Column'
     },
     {
       id: 'connectClip',
       label: 'Connect Clip',
       parameters: [
         {
-          inputType: 'textInput',
-          label: 'Clip',
-          id: 'clip'
+          inputType: 'numberInput',
+          id: 'clip',
+          label: 'Clip Number',
+          required: true,
+          placeholder: 'Clip Number',
+          invalidText: 'Please enter a valid Clip Number',
+          tooltip: 'The Clip number is the Column this clip is in'
         },
         {
-          inputType: 'textInput',
+          inputType: 'numberInput',
+          id: 'layer',
           label: 'Layer',
-          id: 'layer'
+          required: true,
+          placeholder: 'Layer',
+          invalidText: 'Please enter a valid Layer Number'
         }
       ]
     },
@@ -73,9 +82,12 @@ class DeviceProviderResolumeArena extends ConnectionProviderOSC {
       label: 'Select Deck',
       parameters: [
         {
-          inputType: 'textInput',
+          inputType: 'numberInput',
+          id: 'deck',
           label: 'Deck',
-          id: 'deck'
+          required: true,
+          placeholder: 'Deck Number',
+          invalidText: 'Please enter a valid Deck Number'
         }
       ]
     },
@@ -84,9 +96,12 @@ class DeviceProviderResolumeArena extends ConnectionProviderOSC {
       label: 'Select Layer',
       parameters: [
         {
-          inputType: 'textInput',
+          inputType: 'numberInput',
+          id: 'layer',
           label: 'Layer',
-          id: 'layer'
+          required: true,
+          placeholder: 'Layer',
+          invalidText: 'Please enter a valid Layer Number'
         }
       ]
     },
@@ -95,14 +110,21 @@ class DeviceProviderResolumeArena extends ConnectionProviderOSC {
       label: 'Select Clip',
       parameters: [
         {
-          inputType: 'textInput',
-          label: 'Clip',
-          id: 'clip'
+          inputType: 'numberInput',
+          id: 'clip',
+          label: 'Clip Number',
+          required: true,
+          placeholder: 'Clip Number',
+          invalidText: 'Please enter a valid Clip Number',
+          tooltip: 'The Clip number is the Column this clip is in'
         },
         {
-          inputType: 'textInput',
+          inputType: 'numberInput',
+          id: 'layer',
           label: 'Layer',
-          id: 'layer'
+          required: true,
+          placeholder: 'Layer',
+          invalidText: 'Please enter a valid Layer Number'
         }
       ]
     },
@@ -111,81 +133,71 @@ class DeviceProviderResolumeArena extends ConnectionProviderOSC {
       label: 'Set BPM',
       parameters: [
         {
-          inputType: 'textInput',
+          inputType: 'numberInput',
+          id: 'bpm',
           label: 'BPM',
-          id: 'bpm'
+          required: true,
+          placeholder: 'Tempo',
+          invalidText: 'Please enter a valid BPM',
+          tooltip: 'The Clip number is the Column this clip is in'
         }
       ]
     },
     {
       id: 'decBPM',
-      label: 'Decrease Tempo',
-      parameters: []
+      label: 'Decrease Tempo'
     },
     {
       id: 'incBPM',
-      label: 'Increase Tempo',
-      parameters: []
+      label: 'Increase Tempo'
     },
     {
       id: 'pullBPM',
-      label: 'Pull Tempo',
-      parameters: []
+      label: 'Pull Tempo'
     },
     {
       id: 'pushBPM',
-      label: 'Push Tempo',
-      parameters: []
+      label: 'Push Tempo'
     },
     {
       id: 'divBPM',
-      label: 'Divide Tempo by 2',
-      parameters: []
+      label: 'Divide Tempo by 2'
     },
     {
       id: 'multBPM',
-      label: 'Multiply Tempo by 2',
-      parameters: []
+      label: 'Multiply Tempo by 2'
     },
     {
       id: 'tapBPM',
-      label: 'Tap Tempo',
-      parameters: []
+      label: 'Tap Tempo'
     },
     {
       id: 'resyncBPM',
-      label: 'Resync Tempo',
-      parameters: []
+      label: 'Resync Tempo'
     },
     {
       id: 'pauseBPM',
-      label: 'Pause Tempo',
-      parameters: []
+      label: 'Pause Tempo'
     },
     {
       id: 'resumeBPM',
-      label: 'Resume Tempo',
-      parameters: []
+      label: 'Resume Tempo'
     },
     {
       id: 'startMetronome',
-      label: 'Start Metronome',
-      parameters: []
+      label: 'Start Metronome'
     },
     {
       id: 'stopMetronome',
-      label: 'Stop Metronome',
-      parameters: []
+      label: 'Stop Metronome'
     },
     {
       id: 'startRecord',
-      label: 'Start Record',
-      parameters: []
+      label: 'Start Record'
     },
     {
       id: 'stopRecord',
-      label: 'Stop Record',
-      parameters: []
+      label: 'Stop Record'
     }
   ]
 
